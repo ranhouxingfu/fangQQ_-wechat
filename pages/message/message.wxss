@@ -1,0 +1,79 @@
+.message-search{
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+.message-search input{
+  padding:2px 5px;
+  width: 90%;
+  border-radius: 8px;
+  background: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+.message-search-placeholder{
+  text-align: center;
+  font-size: 14px;
+}
+.message-list-item{
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  border-bottom:1px solid #f3f3f3;
+}
+.message-list-item .item-user-image{
+  width: 45px;
+  height: 45px;
+   border: 1px solid #f3f3f3; 
+  border-radius: 100%;
+  overflow: hidden;
+
+}
+.message-list-item .item-user-image image{
+   display: inline-block;
+   width: 45px;
+   height: 45px; 
+}
+.item-center{
+   flex: 1;
+   display: flex;
+   padding: 5px;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.item-user-name{
+  font-family: "微软雅黑";
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.item-user-content,.time{
+  font-family: "微软雅黑";
+  color: #808080;
+  font-size: 12px;
+  line-height: 12px;
+}
+ .item-user-content{
+   line-height: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+} 
+.item-right{
+  display: flex;
+  padding: 5px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+.mark{
+  width: 20px;
+  height: 20px;
+  background: #ff0000;
+  border-radius: 100%;
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  align-items: center;
+}

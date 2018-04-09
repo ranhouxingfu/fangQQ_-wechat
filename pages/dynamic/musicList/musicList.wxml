@@ -1,0 +1,18 @@
+<view class='section'>
+  <block wx:for="{{musicList}}" wx:key='inx'>
+    <view class='music_list_box' catchtap='go_to_detail'  data-lyricsdata="{{item.data}}">
+      <view class='music_list_left'>
+        <text class='music_name'>{{item.data.songname}}</text>
+        <text class='music_singer'>{{item.data.singer[0].name}}</text>
+      </view>
+        <view class='music-right-image'  catchtap='playing_music'  data-songdata="{{item.data}}">
+      <image src='/images/start.png'></image>
+    </view>
+    </view>
+  </block>
+</view>
+<view class='{{isOpen ? "opened" : "closed"}}'>
+   <audio poster="{{poster}}" name="{{singname}}" author="{{singerauthor}}" id="myAudio" controls loop></audio>
+</view>
+<!--使用bind绑定事件，会触发冒泡事件；
+    使用catch绑定则不会触发父级事件  -->

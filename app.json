@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/message/message",
+    "pages/connect/connect",
+    "pages/dynamic/dynamic",
+    "pages/dynamic/music/music",
+    "pages/music/playmusic",
+    "pages/dynamic/musicList/musicList",
+    "pages/dynamic/musicDetail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "backgroundColor":"#ffffff",
+    "list":[{
+      "pagePath":"pages/message/message",
+      "iconPath":"images/tab_message_normal.png",
+      "selectedIconPath":"images/tab_message_selected.png",
+      "text":"消息"
+    },{
+      "pagePath": "pages/connect/connect",
+      "iconPath": "images/tab_contact_normal.png",
+      "selectedIconPath": "images/tab_contact_selected.png",
+      "text": "联系人"
+    },{
+      "pagePath":"pages/dynamic/dynamic",
+      "iconPath": "images/tab_dynamic_normal.png",
+      "selectedIconPath": "images/tab_dynamic_selected.png",
+      "text": "动态"
+    }]
+  }
+}

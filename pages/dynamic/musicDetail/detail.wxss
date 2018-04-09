@@ -1,0 +1,43 @@
+/* pages/dynamic/musicDetail/detail.wxss */
+
+.music_detail_top {
+  display: flex;
+  padding: 50px 0 20px;
+  justify-content: center;
+}
+
+.music_detail_image {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #808080;
+  border-radius: 100%;
+  overflow: hidden;
+  -moz-animation: rotation 8s linear infinite;
+  -webkit-animation: rotation 8s linear infinite;
+  -o-animation: rotation 8s linear infinite;
+}
+
+.music_detail_image image {
+  width: 150px;
+  height: 150px;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

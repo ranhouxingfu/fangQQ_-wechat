@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "歌单",
+  "navigationBarBackgroundColor": "#0ab9f4",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true
+}

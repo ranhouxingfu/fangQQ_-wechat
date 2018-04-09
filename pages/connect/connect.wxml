@@ -1,0 +1,56 @@
+<view class='section'>
+  <view class='connect-top'>
+    <view class='connect-search'>
+      <input placeholder-class='connect-search-placeholder' placeholder='搜索'></input>
+    </view>
+    <view class='connect-top-link'>
+      <view class='connect-top-link-left'>
+        <view class='item-image'>
+          <image src='/images/friend.png'></image>
+        </view>
+        <view>
+          <text>朋友</text>
+        </view>
+      </view>
+      <view class='connect-top-link-center'>
+        <view class='item-image'>
+          <image src='/images/chart.png'></image>
+        </view>
+        <view>
+          <text>群聊</text>
+        </view>
+      </view>
+      <view class='connect-top-right'>
+        <view class='item-image'>
+          <image src='/images/public.png'></image>
+        </view>
+        <view>
+          <text>公众号</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='connect-list'>
+    <block wx:for='{{connectList}}' wx:key='{{item.id}}'>
+      <view class="{{(item.isExpanded ? 'collapse' : 'expand') }}">
+        <view bindtap='openList' class='connect-item-list' data-id="{{item.id}}">
+          <image src="{{item.isExpanded ? '/images/close.png':'/images/open.png'}}" class='connect-tree-image' />
+          <text class='connect-item-title'>{{item.groupName}}</text>
+          <text class='connect-item-num'>{{item.num}}</text>
+        </view>
+
+        <view class='connect-item-children' wx:for='{{item.children}}' wx:key='{{item.id}}'>
+          <view>
+            <view class='item-children-image'>
+              <image src='{{item.userImage}}'></image>
+            </view>
+          </view>
+          <view class='item-children-content'>
+            <view class='item-children-title'>{{item.userName}}</view>
+            <view class='item-children-signature'>xxxxxxxx</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

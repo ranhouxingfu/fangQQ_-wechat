@@ -1,0 +1,6 @@
+<!--pages/dynamic/musicDetail/detail.wxml-->
+<view class='music_detail_top'>
+<view class='music_detail_image'><image src='{{musicUrl}}'></image></view>
+</view>
+<view class='music_lyric'>
+<template data="{{lyricData}}"></template></view>

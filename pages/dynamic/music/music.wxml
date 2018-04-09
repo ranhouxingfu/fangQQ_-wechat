@@ -1,0 +1,72 @@
+<view class='section'>
+  <view class='music-top'>
+    <view wx:for='{{tabList}}' wx:key='idx' data-index='{{index}}' class='{{Inx===index ? "selected":"noselect"}}' bindtap='changeTab'>{{item}}</view>
+  </view>
+  <view class='music-mark'>
+    <view class='music-mark-image'>
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class='music-mark-content'>
+      <text class='music-mark-title font-weight-bold'>{{userInfo.nickName}}</text>
+      <text class='music-mark-num'>好友排名2</text>
+    </view>
+  </view>
+  <view class='music-top-link'>
+    <view class='music-top-link-left'>
+      <view class='item-image'>
+        <image src='/images/like.png'></image>
+      </view>
+      <view>
+        <text class='font-weight-bold'>我喜欢</text>
+      </view>
+    </view>
+    <view class='music-top-link-center'>
+      <view class='item-image'>
+        <image src='/images/songmenu.png'></image>
+      </view>
+      <view>
+        <text class='font-weight-bold'>我的歌单</text>
+      </view>
+    </view>
+    <view class='music-top-right'>
+      <view class='item-image'>
+        <image src='/images/replay.png'></image>
+      </view>
+      <view>
+        <text class='font-weight-bold'>最近播放</text>
+      </view>
+    </view>
+  </view>
+  <view class='music-play-box'>
+    <view bindtap='playSong'>
+      <image src='/images/start.png'></image>
+      <text class='font-weight-bold'>随机播放</text>
+    </view>
+    <view>
+      <image src='/images/download.png'></image>
+      <text class='font-weight-bold'>下载到手机</text>
+    </view>
+  </view>
+  <view class='music-list-box'>
+<block wx:for="{{musicList}}" wx:key='inx'>
+   <view class='music-mark'  data-id="{{item.id}}" bindtap='Go_music_list'>
+    <view class='music-list-image'>
+      <image src="{{item.picUrl}}"></image>
+    </view>
+    <view class='music-mark-content'>
+      <text class='music-mark-title font-weight-bold'>{{item.topTitle}}</text>
+      <text class='music-mark-num'>{{item.songList.length}}首</text>
+    </view>
+    <view class='music-right-image'>
+      <image src='/images/tip.png'></image>
+    </view>
+  </view>
+</block>
+  </view>
+
+  <view bindtap='closeDialog' class="{{(show ? 'open dialog' : 'close dialog') }}">
+  <view class='dialog-back' ></view>
+  <view class='dialog-content'>
+  <audio src="{{music_src}}" id="myAudio" controls loop></audio></view>
+  </view>
+</view>

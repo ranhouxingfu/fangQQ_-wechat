@@ -1,0 +1,22 @@
+<view class='message-area'>
+  <view class='message-search'>
+    <input placeholder-class='message-search-placeholder' placeholder='搜索'></input>
+  </view>
+  <view class='message-list'>
+    <block wx:for='{{message}}' wx:key="idx">
+      <view class='message-list-item'>
+        <view class='item-user-image item-left'>
+          <image src='{{item.userImage}}'></image>
+        </view>
+        <view class='item-center'>
+          <view class='item-user-name'>{{item.userName}}</view>
+          <view class='item-user-content'>{{item.content}}</view>
+        </view>
+        <view class='item-right'>
+          <view class='time'>{{item.time}}</view>
+          <view class='mark' wx:if="{{item.count}}">{{item.count}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

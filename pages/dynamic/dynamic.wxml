@@ -1,0 +1,42 @@
+<view class='section'>
+  <view class='dynamic-top'>
+    <view class='dynamic-search'>
+      <input placeholder-class='dynamic-search-placeholder' placeholder='搜索'></input>
+    </view>
+    <view class='dynamic-top-link'>
+      <view class='dynamic-top-link-left'>
+        <view class='item-image'>
+          <image src='/images/zone.png'></image>
+        </view>
+        <view>
+          <text>好友动态</text>
+        </view>
+      </view>
+      <view class='dynamic-top-link-center'>
+        <view class='item-image'>
+          <image src='/images/vicinity.png'></image>
+        </view>
+        <view>
+          <text>附近</text>
+        </view>
+      </view>
+      <view class='dynamic-top-right'>
+        <view class='item-image'>
+          <image src='/images/tribe.png'></image>
+        </view>
+        <view>
+          <text>兴趣部落</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='dynamic-list'>
+   <block wx:for="{{dynimacList}}" wx:key="{{item.id}}">
+        <view class='dynamic-item-list'  data-id="{{item.id}}" bindtap='narvagation'>
+          <image src="{{item.url}}" class='dynamic-tree-image' />
+          <text class='dynamic-item-title'>{{item.name}}</text>
+          <image src="/images/tip.png" class='dynamic-tree-image' />
+        </view>
+        </block>
+  </view>
+</view>

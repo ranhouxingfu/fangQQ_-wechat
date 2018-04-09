@@ -1,0 +1,166 @@
+.section {
+  background: #f8f9fb;
+  height: 100%;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.music-top {
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  color: #808080;
+  display: flex;
+  justify-content: space-around;
+}
+
+.selected {
+  border-bottom: 3px solid #3eb94e;
+  color: #3eb94e;
+  /* transition: all ease 0.1s;  */
+}
+
+.music-top > view {
+  padding: 10px 0;
+  flex: 1;
+  text-align: center;
+}
+
+.music-mark {
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: wrap;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+.music-mark-image {
+  border: 1px solid #f1f1f1;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+}
+
+.music-mark-image image {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+.music-mark-content {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 5px;
+  justify-content: space-between;
+}
+
+.music-mark-content .music-mark-num {
+  color: #808080;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.music-right-image image{
+  width: 20px;
+  height: 20px;
+}
+.music-top-link {
+  align-content: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  padding: 5px 0;
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.music-top-link .item-image image {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.music-play-box {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+  background: #fff;
+}
+
+.music-play-box>view {
+  display: flex;
+  align-items: center;
+}
+
+.music-play-box image {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.music-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.music-list-image {
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+}
+
+.music-list-image image {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+/* 弹框 */
+
+.dialog {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.dialog-back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-content {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+
+.dialog-content > audio {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
