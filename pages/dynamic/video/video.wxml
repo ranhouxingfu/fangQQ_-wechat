@@ -1,0 +1,20 @@
+<view class='section'>
+  <scroll-view scroll-y="{{scrollY}}" class='video-contain' bindscrolltoupper='refesh' bindscrolltolower='loadMore'>
+    <view wx:if='{{hasRefesh}}' class='video-top-loading'>
+      <icon type='waiting' size='20'>
+        <text>刷新中...</text>
+      </icon>
+    </view>
+    <view class='video-content-box'>
+      <block wx:for='{{videoList}}' data-id='{{item.id}}' wx:key='{{item.id}}'>
+        <view class='video-title'>
+          <text>{{item.title}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <view  class='video-content'>
+        <video src='{{item.src}}' controls></video>
+    </view>
+    </block>
+</view>
+</scroll-view>
+</view>

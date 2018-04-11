@@ -64,9 +64,8 @@
 </block>
   </view>
 
-  <view bindtap='closeDialog' class="{{(show ? 'open dialog' : 'close dialog') }}">
-  <view class='dialog-back' ></view>
-  <view class='dialog-content'>
+  <view class="{{(show ? 'open dialog-content' : 'close') }}">
+  <view>
   <audio src="{{music_src}}" id="myAudio" controls loop></audio></view>
   </view>
 </view>

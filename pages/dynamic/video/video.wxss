@@ -1,0 +1,23 @@
+.section{
+  width: 100%;
+  height: 100%;
+}
+.video-contain{
+  height: 90%;
+}
+.video-top-loading{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+.video-title{
+  display: flex;
+  padding: 15px;
+  /* background:  */
+  justify-content: space-between
+}
+ .video-content video{
+   width: 100%;
+} 

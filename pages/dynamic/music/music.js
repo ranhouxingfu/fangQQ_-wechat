@@ -1,4 +1,4 @@
-var api = require('../../../utils/api.js')
+var api = require('../../../utils/service/api.js')
 //获取应用实例
 const app = getApp()
 Page({
@@ -75,7 +75,7 @@ Page({
   // 随机播放播放音乐
   playSong: function () {
     this.setData({
-      show: !this.data.show,
+      show: true,
     })
 
     // 使用wx.createAudioContext获取audio上下文 context
@@ -83,13 +83,6 @@ Page({
     this.audioCtx.setSrc('http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46');
     this.audioCtx.play()
   },
-  // 关闭弹框
-  closeDialog() {
-    this.setData({
-      show: !this.data.show
-    })
-  },
-
   // 跳转到歌单页面
   Go_music_list(e) {
     let listId = e.currentTarget.dataset.id;
@@ -116,7 +109,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   this.setData({
+      show: false
+    })
   },
 
   /**

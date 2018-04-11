@@ -34,7 +34,7 @@
     <block wx:for='{{connectList}}' wx:key='{{item.id}}'>
       <view class="{{(item.isExpanded ? 'collapse' : 'expand') }}">
         <view bindtap='openList' class='connect-item-list' data-id="{{item.id}}">
-          <image src="{{item.isExpanded ? '/images/close.png':'/images/open.png'}}" class='connect-tree-image' />
+          <image src="{{item.isExpanded ? '/images/close.png':'/images/open.png'}}" class='connect-tree-image'/>
           <text class='connect-item-title'>{{item.groupName}}</text>
           <text class='connect-item-num'>{{item.num}}</text>
         </view>
@@ -42,7 +42,7 @@
         <view class='connect-item-children' wx:for='{{item.children}}' wx:key='{{item.id}}'>
           <view>
             <view class='item-children-image'>
-              <image src='{{item.userImage}}'></image>
+              <image src='{{item.userImage}}'  class='{{item.online?"online":"outline"}}'></image>
             </view>
           </view>
           <view class='item-children-content'>

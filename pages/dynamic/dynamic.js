@@ -1,42 +1,11 @@
+import dynamicData from '../../utils/mock/dynamic.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dynimacList:[{
-      id:1,
-      url:'/images/game.png',
-      name:'游戏'
-    },{
-      id: 2,
-      url: '/images/weather.png',
-      name: '日迹'
-      },{
-        id: 3,
-        url: '/images/kan.png',
-        name: '看点'
-    },{
-      id: 4,
-      url: '/images/song.png',
-      name: '音乐'
-      },{
-        id: 5,
-        url: '/images/video.png',
-        name: '直播'
-    },{
-      id: 6,
-      url: '/images/qun.png',
-      name: '附近的群'
-      },{
-        id: 7,
-        url: '/images/cityse.png',
-        name: '同城服务'
-    },{
-      id: 8,
-      url: '/images/sport.png',
-      name: '运动'
-    }]
+    dynimacList:[]
   },
   narvagation(e){
     var id = e.currentTarget.dataset.id
@@ -44,14 +13,28 @@ Page({
       case 4:
       wx.navigateTo({
         url: "/pages/dynamic/music/music",
+      });
+      break;
+      case 5:
+      wx.navigateTo({
+        url: '/pages/dynamic/video/video',
       })
+      break;
+      case 8:
+      wx.navigateTo({
+        url: '/pages/dynamic/sport/sport',
+      })
+      break;
     }
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(dynamicData)
+    this.setData({
+      dynimacList: dynamicData.data
+    })
   },
 
   /**
